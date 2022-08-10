@@ -20,11 +20,15 @@ def do_login(request):
         if user!=None:
             login(request,user)
             if user.user_type=="1":
-                return HttpResponse('devdingo')
+                return HttpResponseRedirect(reverse("index"))
             else:
                 return HttpResponse("dingo")
 
         else:
             messages.error(request,"Email ou mot de passe invalide")
             return HttpResponseRedirect("/")
+
+
+def index(request):
+    return render(request, 'adminSE/index.html')
 

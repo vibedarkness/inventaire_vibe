@@ -22,5 +22,6 @@ from SE import views
 urlpatterns = [
     path('', views.login_page, name="show_login"),
     path('do_login', views.do_login, name="do_login"),
+    path('index', views.index, name="index"),
     path('__debug__/', include('debug_toolbar.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
