@@ -27,5 +27,7 @@ urlpatterns = [
     path('nouvelle_commande', views.nouvelle_commande, name="nouvelle_commande"),
     path('nouveau_fournisseur', views.nouveau_fournisseur, name="nouveau_fournisseur"),
     path('nouveau_produit', views.nouveau_produit, name="nouveau_produit"),
+    path('liste_client', views.liste_client, name="liste_client"),
+    path('liste_fournisseur', views.liste_fournisseur, name="liste_fournisseur"),
     path('__debug__/', include('debug_toolbar.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
