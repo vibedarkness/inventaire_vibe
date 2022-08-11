@@ -47,6 +47,13 @@ def nouveau_produit(request):
 
 def liste_client(request):
     return render(request, 'adminSE/liste_client.html')
+
 def liste_fournisseur(request):
     return render(request, 'adminSE/liste_fournisseur.html')
+
+def liste_produit(request):
+    return render(request, 'adminSE/liste_produit.html')
+
+def liste_vente(request):
+    return render(request, 'adminSE/liste_vente.html')
 
