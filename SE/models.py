@@ -67,8 +67,7 @@ class Commande(models.Model):
     ]
 
     status= models.CharField(max_length=10, choices=status_choices, default='LIVRER')
-
-
+    quantite_commande= models.IntegerField(max_length=100, null=False, default=0)
 
 
 
