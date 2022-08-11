@@ -1,3 +1,4 @@
+from ast import Return
 from django.shortcuts import render
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -31,4 +32,16 @@ def do_login(request):
 
 def index(request):
     return render(request, 'adminSE/index.html')
+
+def nouveau_client(request):
+    return render(request, 'adminSE/nouveau_client.html')
+
+def nouvelle_commande(request):
+    return render(request, 'adminSE/nouvelle_commande.html')
+
+def nouveau_fournisseur(request):
+    return render(request, 'adminSE/nouveau_fournisseur.html')
+
+def nouveau_produit(request):
+    return render(request, 'adminSE/nouveau_produit.html')
 

@@ -23,5 +23,9 @@ urlpatterns = [
     path('', views.login_page, name="show_login"),
     path('do_login', views.do_login, name="do_login"),
     path('index', views.index, name="index"),
+    path('nouveau_client', views.nouveau_client, name="nouveau_client"),
+    path('nouvelle_commande', views.nouvelle_commande, name="nouvelle_commande"),
+    path('nouveau_fournisseur', views.nouveau_fournisseur, name="nouveau_fournisseur"),
+    path('nouveau_produit', views.nouveau_produit, name="nouveau_produit"),
     path('__debug__/', include('debug_toolbar.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
