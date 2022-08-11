@@ -16,26 +16,37 @@
             </div>
             <div class="widget-content widget-content-area">
                 <form method="POST" action="#">
+
                     <div class="form-group mb-4">
-                        <input type="email" class="form-control" id="rEmail" placeholder="Prenom *">
+                        <input type="text" class="form-control" id="rPassword" placeholder="Nom *">
                     </div>
                     <div class="form-group mb-4">
-                        <input type="password" class="form-control" id="rPassword" placeholder="Nom *">
+                        <input type="date" class="form-control" id="rEmail" placeholder="Date Achat *">
                     </div>
                     <div class="form-group mb-4">
-                        <input type="email" class="form-control" id="rEmail" placeholder="Adresse *">
+                        <input type="date" class="form-control" id="rEmail" placeholder="Date Expiration *">
                     </div>
                     <div class="form-group mb-4">
                         <input type="email" class="form-control" id="rEmail" placeholder="Telephone *">
                     </div>
                     <div class="form-group mb-4">
-                        <input type="email" class="form-control" id="rEmail" placeholder="Domaine *">
+                        <input type="number" class="form-control" id="rEmail" placeholder="Quantité *">
                     </div>
                     <div class="form-group mb-4">
+                        <input type="number" class="form-control" id="rEmail" placeholder="Prix *">
+                    </div>
+
+                    <div class="form-group mb-4">
                         <select class="form-control  basic">
-                            <option value="personne" selected="selected">Personne</option>
+                            <option value="personne" selected="selected">Fournisseur</option>
+                            <option value="entreprise">Entreprise</option>
+                            <option value="entreprise">Entreprise</option>
                             <option value="entreprise">Entreprise</option>
                         </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="exampleFormControlTextarea1">Description</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary mt-3" style="margin-left:250px;">Ajouter</button>
