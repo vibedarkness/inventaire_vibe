@@ -15,20 +15,32 @@
                 </div>
             </div>
             <div class="widget-content widget-content-area">
-                <form method="POST" action="#">
+                <form method="POST" action="do_fournisseur">
+                    {% csrf_token %}
                     <div class="form-group mb-4">
-                        <input type="password" class="form-control" id="rPassword" placeholder="Nom *">
+                        <input type="text" name="nom" class="form-control" id="rPassword" placeholder="Nom *">
                     </div>
                     <div class="form-group mb-4">
-                        <input type="email" class="form-control" id="rEmail" placeholder="Adresse *">
+                        <input type="text" name="adresse" class="form-control" id="rEmail" placeholder="Adresse *">
                     </div>
                     <div class="form-group mb-4">
-                        <input type="email" class="form-control" id="rEmail" placeholder="Telephone *">
+                        <input type="number" name="telephone"  class="form-control" id="rEmail" placeholder="Telephone *">
                     </div>
 
 
 
                     <button type="submit" class="btn btn-primary mt-3" style="margin-left:250px;">Ajouter</button>
+                    <div class="row">
+                        {% if messages %}
+                       <div class="col-12">
+                          {% for message in messages %}
+                          {% if message.tags == 'error' %}
+                          <div class="alert alert-danger" style="margin-top:10px">{{ message }}</div>
+                          {% endif %}
+                          {% endfor %}
+                        </div>
+                        {% endif %}
+                      </div>
                 </form>
 
                 <div class="code-section-container">
@@ -61,6 +73,7 @@
             </div>
         </div>
     </div>
+    
 </div>
 </div>
 

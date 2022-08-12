@@ -15,27 +15,39 @@
                 </div>
             </div>
             <div class="widget-content widget-content-area">
-                <form method="POST" action="#">
+                <form method="POST" action="do_client">
+                    {% csrf_token %}
                     <div class="form-group mb-4">
-                        <input type="password" class="form-control" id="rPassword" placeholder="Nom *">
+                        <input type="text" class="form-control" name="nom" id="rPassword" placeholder="Nom *">
                     </div>
                     <div class="form-group mb-4">
-                        <input type="email" class="form-control" id="rEmail" placeholder="Adresse *">
+                        <input type="text" class="form-control" name="adresse" id="rEmail" placeholder="Adresse *">
                     </div>
                     <div class="form-group mb-4">
-                        <input type="email" class="form-control" id="rEmail" placeholder="Telephone *">
+                        <input type="number" class="form-control" name="telephone" id="rEmail" placeholder="Telephone *">
                     </div>
                     <div class="form-group mb-4">
-                        <input type="email" class="form-control" id="rEmail" placeholder="Domaine *">
+                        <input type="text" class="form-control" name="domaine" id="rEmail" placeholder="Domaine *">
                     </div>
                     <div class="form-group mb-4">
-                        <select class="form-control  basic">
+                        <select class="form-control  basic" name="type_de_client">
                             <option value="personne" selected="selected">Personne</option>
                             <option value="entreprise">Entreprise</option>
                         </select>
                     </div>
 
                     <button type="submit" class="btn btn-primary mt-3" style="margin-left:250px;">Ajouter</button>
+                    <div class="row">
+                        {% if messages %}
+                       <div class="col-12">
+                          {% for message in messages %}
+                          {% if message.tags == 'error' %}
+                          <div class="alert alert-danger" style="margin-top:10px">{{ message }}</div>
+                          {% endif %}
+                          {% endfor %}
+                        </div>
+                        {% endif %}
+                      </div>
                 </form>
 
                 <div class="code-section-container">

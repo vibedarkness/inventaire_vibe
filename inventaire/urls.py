@@ -27,9 +27,12 @@ urlpatterns = [
     path('nouvelle_commande', views.nouvelle_commande, name="nouvelle_commande"),
     path('nouveau_fournisseur', views.nouveau_fournisseur, name="nouveau_fournisseur"),
     path('nouveau_produit', views.nouveau_produit, name="nouveau_produit"),
-    path('liste_client', views.liste_client, name="liste_client"),
     path('liste_fournisseur', views.liste_fournisseur, name="liste_fournisseur"),
     path('liste_produit', views.liste_produit, name="liste_produit"),
     path('liste_vente', views.liste_vente, name="liste_vente"),
+    path('do_client', views.do_client, name="do_client"),
+    path('do_fournisseur', views.do_fournisseur, name="do_fournisseur"),
+    path('liste_client', views.liste_client, name="liste_client"),
+    path('do_produit', views.do_produit, name="do_produit"),
     path('__debug__/', include('debug_toolbar.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
